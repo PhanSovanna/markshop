@@ -8,5 +8,5 @@ module.exports = function(app) {
 	app.route('/api/users/me').get(todoList.me);
 	app.route('/api/login').post(todoList.login);
 	app.route('/api/register').post(todoList.register);
-	app.route('*').get(todoList.notFound);
+	// app.route('*').get(todoList.notFound);
 };

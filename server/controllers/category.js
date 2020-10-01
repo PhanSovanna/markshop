@@ -3,7 +3,7 @@
 var response = require('../res');
 var connection = require('../configs/db');
 
-exports.Category = function(req, res) {
+module.exports.Category = function(req, res) {
 	connection.query('SELECT * FROM category', function(err, results, fields) {
 		if (err) {
 			console.log(err);
@@ -18,7 +18,7 @@ exports.Category = function(req, res) {
 	});
 };
 
-exports.findCategory = function(req, res) {
+module.exports.findCategory = function(req, res) {
 	connection.query('SELECT * FROM category WHERE id = ?', req.params.id, function(err, results, fields) {
 		if (err) {
 			console.log(err);
@@ -42,7 +42,7 @@ exports.findCategory = function(req, res) {
 	});
 };
 
-exports.createCategory = function(req, res) {
+module.exports.createCategory = function(req, res) {
 	const { name } = req.body;
 	connection.query('INSERT INTO category (name) values (?)', [ name ], function(err, results) {
 		if (err) {
@@ -62,7 +62,7 @@ exports.createCategory = function(req, res) {
 	});
 };
 
-exports.updateCategory = function(req, res) {
+module.exports.updateCategory = function(req, res) {
 	const { name } = req.body;
 
 	if (!name) {
@@ -87,7 +87,7 @@ exports.updateCategory = function(req, res) {
 	}
 };
 
-exports.deleteCategory = function(req, res) {
+module.exports.deleteCategory = function(req, res) {
 	connection.query('DELETE from category WHERE id = ?', [ req.params.id ], function(err, results) {
 		if (err) {
 			console.log(err);

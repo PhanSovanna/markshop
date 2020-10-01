@@ -10,6 +10,10 @@ exports.home = function(req, res) {
 	response.ok('Hello Team Bootcamp 1! welcome home! Pls Login', res);
 };
 
+exports.notFound = function(req, res) {
+	res.send('404 Not Found!');
+};
+
 exports.login = function(req, res) {
 	const email = req.body.email;
 	const password = req.body.password;
@@ -41,7 +45,7 @@ exports.login = function(req, res) {
 };
 
 exports.getAllUsers = function(req, res){
-	connection.query('SELECT id,email,username,role FROM users', function(err, results, fields) {
+	connection.query('SELECT id,email,username FROM users', function(err, results, fields) {
 		if (err) {
 			console.log(err);
 		} else {

@@ -45,7 +45,7 @@ exports.login = function(req, res) {
 };
 
 exports.getAllUsers = function(req, res){
-	connection.query('SELECT id,email,username FROM users', function(err, results, fields) {
+	connection.query('SELECT id,email,username,role FROM users', function(err, results, fields) {
 		if (err) {
 			console.log(err);
 		} else {

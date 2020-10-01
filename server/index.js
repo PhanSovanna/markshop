@@ -23,7 +23,7 @@ var user_route = require('./routes/api/userRoute');
 var products_routes = require('./routes/api/productRoute');
 var category_routes = require('./routes/api/categoryRoute');
 var transaction_routes = require('./routes/api/transactionRoute')
-var todoList = require('./controllers/user');
+// var todoList = require('./controllers/user');
 
 transaction_routes(app)
 products_routes(app);
@@ -38,7 +38,7 @@ if (process.env.NODE_ENV === 'production') {
     app.get(/.*/, (req, res) => res.sendFile(__dirname + '/public/index.html'));
   }
 
-app.route('*').get(todoList.notFound);
+// app.route('*').get(todoList.notFound);
 
 // if we don't have config.js so it will select port 5000 default
 const port = process.env.PORT || 5000;

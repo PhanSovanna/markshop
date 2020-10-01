@@ -10,10 +10,6 @@ exports.home = function(req, res) {
 	response.ok('Hello Team Bootcamp 1! welcome home! Pls Login', res);
 };
 
-exports.notFound = function(req, res) {
-	res.send('404 Not Found!');
-};
-
 exports.login = function(req, res) {
 	const email = req.body.email;
 	const password = req.body.password;

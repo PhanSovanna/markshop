@@ -268,7 +268,3 @@ exports.addReduce = function(req, res) {
 exports.Index = function(req, res) {
 	response.ok('Hello Team Bootcamp! welcome home!', res);
 };
-
-exports.notFound = function(req, res) {
-	res.send('404 Not Found!');
-};

@@ -42,7 +42,7 @@ if (process.env.NODE_ENV === 'production') {
     app.get(/.*/, (req, res) => res.sendFile(__dirname + '/public/index.html'));
   }
 
-app.route('*').get(todoList.notFound);
+// app.route('*').get(todoList.notFound);
 
 // if we don't have config.js so it will select port 5000 default
 const port = process.env.PORT || 5000;

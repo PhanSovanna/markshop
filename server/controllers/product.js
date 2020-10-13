@@ -120,6 +120,7 @@ exports.findProductsSearch = function(req, res){
 
 
 exports.findProducts = function(req, res) {
+	console.log("product", req.params.id)
 	connection.query(
 		'SELECT id, name, image, (select name from category where products.id_category = category.id) as category, quantity, date_added, date_update from products WHERE id = ?',
 		req.params.id,

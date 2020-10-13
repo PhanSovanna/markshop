@@ -6,6 +6,8 @@
 -- Generation Time: Aug 30, 2019 at 03:17 PM
 -- Server version: 10.1.38-MariaDB
 -- PHP Version: 7.3.4
+USE bootcampteamone;
+
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
